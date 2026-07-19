@@ -20,7 +20,6 @@ O projeto simula uma página de agendamento de serviços para pets, oferecendo u
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- Fetch API
 - ViaCEP
 - Git e GitHub
 
@@ -35,6 +34,7 @@ agenda-pet-maisprati/
 ├── README.md
 └── assets/
     └── img/
+    └── favicon/
 ```
 
 ## 🚀 Como executar o projeto
@@ -61,13 +61,12 @@ Este projeto utiliza a API pública ViaCEP para preencher automaticamente os cam
 
 ## 🎨 Paleta de cores
 
-- Azul: `#4F46E5`
-- Verde água: `#14B8A6`
-- Branco: `#FFFFFF`
-- Cinza claro: `#F3F4F6`
-- Texto: `#1F2937`
+- Pine: `#142a1f (Principal), #1e3a2b, #2c5039, #4c7259`
+- Gold: `#b8862e, #d6a544 (Destaque), #e8c36b`
+- Paper: `#faf7ef, #f3eddc`
+- Ink : `#1c2019, #4c5245, #7a8071`
 
-Fonte utilizada: **Poppins**.
+Fonte utilizada: **Fraunces (Display), Work Sans (Body) e JetBrains Mono (Mono).**.
 
 ## 📚 Aprendizados
 
@@ -75,8 +74,9 @@ Durante o desenvolvimento deste projeto, foram praticados os seguintes conceitos
 
 - Estruturação semântica com HTML5
 - Estilização responsiva com CSS3
+- Design System utilizando variáveis CSS (:root).
 - Manipulação do DOM com JavaScript
-- Consumo de APIs com `fetch` e `async/await`
+- Consumo de APIs públicas com fetch e tratamento de erros.
 - Versionamento de código com Git e GitHub
 - Organização de branches (`main` e `develop`)
 
