@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./assets/favicon/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>AgendaPet</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1><img src="assets/favicon/favicon.png" alt="Logo AgendaPet" width="35"> AgendaPet</h1>
+
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio">
+    <h2>O cuidado que seu pet merece 🐾</h2>
+    <p>
+      Agende banhos, consultas, vacinas e outros serviços para o seu melhor
+      amigo de forma rápida, prática e segura.
+    </p>
+    <a href="#contato" class="btn">Agendar Agora</a>
+    </section>
+
+    <section id="servicos">
+      <div class="cards-servicos">
+        <h2>Nossos Serviços</h2>
+
+        <div class="card-servico">
+          <h3>Banho</h3>
+          <p>Deixe seu pet limpinho e cheiroso com produtos hipoalergênicos.</p>
+        </div>
+
+        <div class="card-servico">
+          <h3>Tosa</h3>
+          <p>Corte na medida certa, do jeito que seu pet merece.</p>
+        </div>
+
+        <div class="card-servico">
+          <h3>Consulta</h3>
+          <p>Acompanhamento veterinário para manter a saúde em dia.</p>
+        </div>
+
+        <div class="card-servico">
+          <h3>Passeio</h3>
+          <p>Energia gasta e cauda balançando — passeios monitorados e seguros.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="sobre-texto">
+        <h2>Sobre o AgendaPet</h2>
+        <p>O AgendaPet nasceu para simplificar a rotina de quem ama um pet. Reunimos banho, tosa, consulta e passeio em um só lugar, com agendamento rápido e sem complicação — porque o tempo que sobra é pra brincar, não pra ficar no telefone marcando horário.</p>
+        <p>Nossa equipe é formada por profissionais treinados e apaixonados por animais, prontos para cuidar do seu companheiro com o mesmo carinho que você tem em casa.</p>
+      </div>
+      <div class="sobre-imagem">
+        <img src="assets/img/sobre.jpg" alt="Cachorro sendo cuidado por um profissional do AgendaPet">
+      </div>
+    </section>
+
+    <section id="contato">
+
+      <div class="contato">
+        <h2>Agende um horário</h2>
+        <p>Preencha seus dados e informe o CEP para preenchermos o endereço automaticamente.</p>
+      </div>
+
+      <form id="form-contato" class="form-card" novalidate>
+
+        <div id="msg-agradecimento" class="agradecimento" hidden>
+          <h3>Agendamento confirmado, <span id="nome-confirmado"></span>!</h3>
+          <p>Em breve entraremos em contato para confirmar o horário do seu pet.</p>
+          <button type="button" class="btn btn-ghost" id="btn-novo-agendamento">Fazer novo agendamento</button>
+        </div>
+
+        <div id="campos-form">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required autocomplete="name">
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="field">
+            <label for="servico">Serviço desejado</label>
+            <select id="servico" name="servico" required>
+              <option value="" disabled selected>Selecione um serviço</option>
+              <option value="banho">Banho</option>
+              <option value="tosa">Tosa</option>
+              <option value="consulta">Consulta</option>
+              <option value="passeio">Passeio</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <div class="field field-cep">
+              <label for="cep">CEP</label>
+              <input type="text" id="cep" name="cep" inputmode="numeric" placeholder="00000-000" maxlength="9" required>
+              <span class="field-hint" id="cep-status" aria-live="polite"></span>
+            </div>
+            <div class="field field-grow">
+              <label for="endereco">Endereço</label>
+              <input type="text" id="endereco" name="endereco" readonly placeholder="Preenchido automaticamente">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field field-grow">
+              <label for="bairro">Bairro</label>
+              <input type="text" id="bairro" name="bairro" readonly>
+            </div>
+            <div class="field field-grow">
+              <label for="cidade">Cidade / UF</label>
+              <input type="text" id="cidade" name="cidade" readonly>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="mensagem">Mensagem <span class="opcional">(opcional)</span></label>
+            <textarea id="mensagem" name="mensagem" rows="3" placeholder="Alguma observação sobre o seu pet?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Agendar Agora</button>
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="footer-logo">AgendaPet</span>
+    <p>Cuidado e carinho para o seu pet, a um clique de distância.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
