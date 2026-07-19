@@ -5,30 +5,23 @@
   --pine-700: #1e3a2b;
   --pine-500: #2c5039;
   --pine-300: #4c7259;
-
   --gold-600: #b8862e;
   --gold-500: #d6a544;
   --gold-300: #e8c36b;
-
   --clay-600: #9a4326;
   --clay-500: #b1502f;
-
   --paper-100: #faf7ef;
   --paper-200: #f3eddc;
   --manila-300: #e8dcb8;
-
   --ink-900: #1c2019;
   --ink-600: #4c5245;
   --ink-400: #7a8071;
-
   --line: rgba(30, 58, 43, 0.16);
   --shadow-tag: 0 10px 24px rgba(20, 42, 31, 0.16);
   --shadow-tag-lift: 0 16px 32px rgba(20, 42, 31, 0.22);
-
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Work Sans", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
-
   --radius-tag: 20px;
   --radius-sm: 10px;
   --gap-section: clamp(3.5rem, 7vw, 7rem);
@@ -137,11 +130,7 @@ section > * {
 
 #inicio {
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    var(--paper-100),
-    var(--paper-200)
-    );
+  background: linear-gradient(135deg, var(--paper-100), var(--paper-200));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,11 +192,11 @@ section > * {
 
 .cards-servicos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 350px)); 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
   gap: 2rem;
-  max-width: 1000px; 
+  max-width: 1000px;
   margin: 0 auto;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .card-servico {
@@ -216,6 +205,7 @@ section > * {
   border-radius: var(--radius-sm);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-tag);
+  transition: all 0.3s ease;
 }
 
 .card-servico:hover {
@@ -247,8 +237,7 @@ section > * {
   padding: var(--gap-section) 1.5rem;
 }
 
-.sobre-texto, 
-.sobre-imagem {
+.sobre-texto, .sobre-imagem {
   flex: 1;
 }
 
@@ -282,7 +271,7 @@ section > * {
 
 #contato {
   padding: var(--gap-section) 1.5rem;
-  max-width: 800px; 
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -319,9 +308,7 @@ section > * {
   margin-bottom: 0.4rem;
 }
 
-.field input, 
-.field select, 
-.field textarea {
+.field input, .field select, .field textarea {
   padding: 0.8rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
@@ -344,11 +331,50 @@ section > * {
   background: var(--gold-300);
 }
 
-.btn-full { width: 100%; }
+.btn-full {
+  width: 100%;
+}
 
 .agradecimento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
   text-align: center;
-  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.agradecimento h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--pine-900);
+}
+
+.agradecimento p {
+  color: var(--ink-600);
+  font-size: 1.1rem;
+  max-width: 400px;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 2px solid var(--gold-500);
+  color: var(--gold-500);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-tag);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-ghost:hover {
+  background: var(--gold-500);
+  color: var(--pine-900);
+}
+
+[hidden] {
+  display: none !important;
 }
 
 @media (max-width: 600px) {
